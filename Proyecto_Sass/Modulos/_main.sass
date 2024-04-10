@@ -1,0 +1,146 @@
+// Main
+     
+#main
+    width: 100%
+    height: 2000px
+    overflow: hidden
+    &_imagen_contenedor
+        display: flex
+        width: 100%
+        justify-content: center
+        img 
+            margin-top: 50px
+            width: 80%
+            border-radius: 5px
+               
+    &_barra_blanca
+        height: 500px
+        width: 1px
+        background-color: #fff
+        position: absolute
+        left: 50%
+        top: 150%
+    &_nombre
+        position: relative
+        top: 17%
+        left: 60%
+        h1
+            text-align: center
+            line-height: 80px
+            letter-spacing: 5px
+            font-size: 3.5rem
+            width: 500px
+            text-transform: uppercase
+            font-family: 'Roboto'
+
+    &_descripcion
+        position: relative
+        top: -2%
+        left: 20%
+        p
+            font-size: 2rem
+            width: 350px
+            text-align: start
+    &_contenedor_boton
+        @include flex (row)
+        button 
+            font:
+                family: 'Oswald'
+                weight: lighter  
+                size: 20px
+            letter-spacing: 2px
+            height: 50px
+            width: 120px
+            cursor: pointer
+            border: solid #404c5d 1px
+            transition: 500ms
+            border-radius: 5px  
+            background: linear-gradient(145deg, #2e2d2d, #212121)
+            box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b
+        button:hover 
+            box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78
+            color: #d6d6d6
+            transition: 500ms
+                    
+                
+#mainP
+    @include flex (column)
+    width: 100%
+    &_galeria
+        @include galeria()
+        width: 100% 
+        .div
+            img
+                margin-bottom: 20px
+                width: 500px
+                border-radius: 10px
+                box-shadow: -1px -5px 15px #41465b, 10px 10px 20px #41465b
+            img:hover
+                box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78
+                cursor: pointer
+            .figcaption
+                text-align: center
+                width: 300px
+                margin-left: 100px
+
+    &_barra_blancaP
+        @extend #main_barra_blanca
+        height: 1000px
+        top: 40%
+    &_h2
+        &_h2
+            font:
+                size: 3rem
+                family: "Anton"
+                weight: lighter
+            text-transform: uppercase
+            color: #dfdfdf
+            letter-spacing: 2px 
+            text-align: center
+
+#mainA
+    width: 100%
+    height: 1000px
+    &_titulo
+        text-align: center
+        margin-block: 20px
+        &_h1
+            @extend #mainP_h2_h2
+    &_imagen_contenedor
+        width: 100%
+        img
+            position: relative
+            left: 15%
+            border-radius: 10px
+    &_barra
+        @extend #mainP_barra_blancaP
+        height: 800px
+        top: 30%
+    &_aside
+        @include flex (column)
+        position: absolute
+        left: 60%
+        top: 40%
+        div
+            background-color: #a5a5a549
+            height: 200px
+            width: 500px
+            border-radius: 20px
+            overflow-y: scroll
+            &::-webkit-scrollbar
+                background-color: $hf
+            &::-webkit-scrollbar-thumb
+                background-color: #cecece8e
+                border-radius: 10px
+            h2
+                @extend #mainP_h2_h2
+                margin-block: 10px
+                font-family: 'Roboto'
+                font-size: 2rem
+            p   
+
+                font-size: 1.5rem
+                text-align: start
+                margin-inline: 10px
+            i 
+                @extend p

@@ -1,0 +1,39 @@
+//footer   
+                
+#footer
+    border-top: 1px solid $contraste
+    padding-top: 20px
+    width: 100%
+    height: 120px
+    padding-bottom: 20px
+    background-color: $hf
+    @include flex (row)
+    &_rrss
+        position: relative
+        left: 800px
+        text-align: center
+        #whs
+            position: absolute
+            top: -5%
+            left: -35%
+            width: 30px
+        #ig
+            @extend #whs
+            top: 80%
+            left: -40%
+            width: 28px 
+        #mail
+            @extend #whs
+            top: 35%
+            width: 32px        
+    &_nav    
+        position: relative
+        left: -800px
+        text-align: center
+    div
+        @include flex (column)
+        a
+            @include anclas (1rem)
+        a:hover
+            color: #9e9e9e
+                
